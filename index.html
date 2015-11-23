@@ -1,23 +1,111 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="main-slideshow" class="owl-carousel owl-theme">
+  <div class="item"><img src="assets/slide1.jpg" alt="Slide 1"></div>
+  <div class="item"><img src="assets/slide2.jpg" alt="Slide 2"></div>
+  <div class="item"><img src="assets/slide3.jpg" alt="Slide 3"></div>
 </div>
+<div id="testimonials" class="page-section">
+  <div class="row">
+    <h3>Salon Citi <span class="amp">&amp;</span> Barber</h3>
+    <hr class="sc" />
+    <div class="small-12 columns">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut hendrerit ligula, sed consectetur leo. Quisque iaculis at erat in lobortis. Aenean rutrum egestas est non interdum. Vivamus vitae finibus nisi. Praesent laoreet dui lacus, quis maximus arcu scelerisque nec. Quisque scelerisque tellus vel rutrum luctus. Ut iaculis nec diam non bibendum. Suspendisse euismod rhoncus volutpat. Nulla nec sagittis justo. Quisque ex lectus, molestie eu tortor id, ornare bibendum felis. Praesent venenatis et leo vitae placerat.</p>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <h3>Women's</h3>
+      </div>
+      <div class="small-8 columns">
+        <p>Shampoo, Cut <span class="amp">&amp;</span> Blowdry - Our stylists can create any look you desire for everyday or any special occasion. Beauty is our philosophy. Let us share your vision.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <h3>Men's</h3>
+      </div>
+      <div class="small-8 columns">
+        <p>Hair Cuts, Beard Trims, and Buzz Cuts. Our masters have the expertise to get you ready for the office or that special date on Friday night.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-4 columns">
+        <h3>Children's</h3>
+      </div>
+      <div class="small-8 columns">
+        <p>Shampoo, Cut and Blowdry. Our friendly stylists will make your child ready for school or the park. We strive to make your child happy and comfortable for their haircut.</p>
+      </div>
+    </div>
+  </div>
+</div><!-- /#testimonials -->
+<div id="booking" class="page-section">
+  <div class="row">
+    <h3>Book Online Now</h3>
+    <hr class="sc" />
+    <div class="row">
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/39.jpg" class="thumbnail"/>
+        <h4>Jim</h4>
+        <p><i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut, Buzz Cut,<br />Men Color</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/18.jpg" class="thumbnail"/>
+        <h4>Ismail</h4>
+        <p><i class="fa fa-female fa-lg"></i> <i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut <span class="amp">&amp;</span> Blow Dry, Single Color, Highlights, Partial Highlights</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/15.jpg" class="thumbnail"/>
+        <h4>Ilyas</h4>
+        <p><i class="fa fa-female fa-lg"></i> <i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut <span class="amp">&amp;</span> Blow Dry, Single Color, Highlights, Partial Highlights</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+    </div><!-- /.row -->
+    <div class="row break">
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/39.jpg" class="thumbnail"/>
+        <h4>Jim</h4>
+        <p><i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut, Buzz Cut,<br />Men Color</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/18.jpg" class="thumbnail"/>
+        <h4>Ismail</h4>
+        <p><i class="fa fa-female fa-lg"></i> <i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut <span class="amp">&amp;</span> Blow Dry, Single Color, Highlights, Partial Highlights</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+      <div class="small-6 medium-4 columns stylist">
+        <img src="http://api.randomuser.me/portraits/med/men/15.jpg" class="thumbnail"/>
+        <h4>Ilyas</h4>
+        <p><i class="fa fa-female fa-lg"></i> <i class="fa fa-male fa-lg"></i> <i class="fa fa-child fa-lg"></i></p>
+        <p>Hair Cut <span class="amp">&amp;</span> Blow Dry, Single Color, Highlights, Partial Highlights</p>
+        <button class="button">Reserve Now</button>
+      </div><!-- /.stylist -->
+    </div><!-- /.row -->
+  </div><!-- /.row -->
+</div><!-- /#booking -->
+<div id="gallery" class="page-section">
+  <div class="row">
+    <h3>Picture Gallery</h3>
+    <hr class="sc" />
+    <div class="small-12 columns">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+      <img src="http://fakeimg.pl/350x200/?text=Image">
+    </div>
+  </div><!-- /.row -->
+</div><!-- /#gallery -->
+
