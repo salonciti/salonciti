@@ -10,4 +10,25 @@ $(document).ready(function() {
     singleItem:true
   });
 
+  var gallery = document.querySelector('.gallery');
+
+  var msnry = new Masonry( gallery, {
+    itemSelector: '.gallery-item',
+    columnWidth: '.gallery-sizer',
+    percentPosition: true
+  });
+
+  imagesLoaded( gallery, function() {
+    // layout Masonry after each image loads
+    msnry.layout();
+  });
+
+  $(".stylist" ).hover(
+    function() {
+      $(this).find("div.book").removeClass("invisible");
+    }, function() {
+      $(this).find("div.book").addClass("invisible");
+    }
+  );
+
 });

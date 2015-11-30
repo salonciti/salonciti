@@ -6,13 +6,24 @@ $topbar-link-color: #000;
 
 @include foundation-everything;
 
+* {
+  box-sizing: border-box;
+}
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
 body {
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 span.amp {
   font-family: Baskerville, Palatino, "Book Antiqua", serif;
   font-style:italic;
+}
+
+th.small {
+  font-size: 0.8em;
 }
 
 h3.page-title {
@@ -27,6 +38,23 @@ hr.sc {
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   margin-bottom: 30px;
+}
+
+a.cta {
+  display: block;
+  width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  background: $primary-color;
+  color: $white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid $primary-color;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 700;
+  font-size: 150%;
 }
 
 li.cta-call {
@@ -48,8 +76,11 @@ li.cta-call {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 700;
 
-  & .menu li.menu-text {
+  & .menu li.brand {
     font-size: 1.4em;
+    & > a {
+      color: black;
+    }
   }
 
   & .menu li {
@@ -93,51 +124,94 @@ li.cta-call {
 #booking {
   background-color: floralwhite;
 
-  & .row.break {
-    margin-top: 70px;
-  }
-
   & .stylist {
     text-align: center;
 
-    & h4 {
-      margin-bottom: 10px;
-      font-family: 'Yanone Kaffeesatz', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    & img {
+    & > a {
       margin: 0 auto;
       display: block;
       width: 150px;
       height: 150px;
       margin-bottom: 10px;
-      border-radius: 50%;
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      border: 0px solid $primary-color;
-    }
+      position: relative;
 
-    button {
-      margin-top: 10px;
-      font-family: 'Yanone Kaffeesatz', sans-serif;
-      font-weight: 700;
-      font-size: 1.2em;
+      & > img {
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border: 0px solid $primary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      & > .book {
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border: 0px solid $primary-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+        background-color: #eee;
+        padding-top: 30%;
+        text-align: center;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-weight: 700;
+        font-size: 1.6em;
+        color: black;
+        text-transform: uppercase;
+        z-index: 10;
+      }
     }
   }
+
+  & h4 {
+    margin-bottom: 10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
+
+.gallery {
+  background-color: mintcream;
+}
+
+/* clear fix */
+.gallery:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.gallery-sizer,
+.gallery-item {
+  width: 33.333%;
+}
+
+.gallery-item {
+  float: left;
+}
+
+.gallery-item img {
+  display: block;
+  max-width: 100%;
+}
+
+
 
 #gallery {
   background-color: mintcream;
   text-align: center;
-
-  & img {
-    width: 31%;
-    padding: 1%;
-    display: inline-block;
-  }
 }
 
 #map {
